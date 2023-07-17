@@ -116,13 +116,15 @@ export default function Route() {
                             </CardDescription>
                           </div>
                           <ul className="flex gap-2">
-                            {user.tags.map((tag) => {
-                              return (
-                                <li key={tag.id}>
-                                  <Badge size="sm">{tag.name}</Badge>
-                                </li>
-                              )
-                            })}
+                            {user.tags
+                              .filter((tag) => tag.symbol !== "MENTOR")
+                              .map((tag) => {
+                                return (
+                                  <li key={tag.id}>
+                                    <Badge size="sm">{tag.name}</Badge>
+                                  </li>
+                                )
+                              })}
                           </ul>
                         </div>
                       </div>
