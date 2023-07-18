@@ -11,6 +11,7 @@ export const loader = async ({ request }: LoaderArgs) => {
       role: { select: { symbol: true } },
       profiles: { select: { headline: true, links: true } },
     },
+    orderBy: { createdAt: "asc" },
   })
 
   return json({ users })
