@@ -61,7 +61,7 @@ export default function Route() {
       <header>
         <h2>Profile</h2>
         <p className="text-muted-foreground">
-          This is how others will see you on the site.
+          Your personal profile information and links.
         </p>
       </header>
 
@@ -109,8 +109,8 @@ export function UserUsernameForm({
             placeholder="yourname"
           />
           <FormDescription>
-            This is your public username as @username and your URL namespace
-            within Bearmentor
+            Your public username as @username and your URL namespace within
+            Bearmentor
           </FormDescription>
           {username.error && (
             <Alert variant="destructive" id={username.errorId}>
@@ -216,9 +216,7 @@ export function UserNickForm({ user }: { user: Pick<User, "id" | "nick"> }) {
             defaultValue={String(user.nick)}
             placeholder="Your Nick"
           />
-          <FormDescription>
-            This is your nick name when being called
-          </FormDescription>
+          <FormDescription>Your nick name when being called</FormDescription>
           {nick.error && (
             <Alert variant="destructive" id={nick.errorId}>
               {nick.error}
